@@ -1,0 +1,100 @@
+﻿@page "/FetchData"
+@using StateContainer.dto.Market
+@using StateContainer.services
+@using StateContainer.web.State
+
+@inject WorldCoinService _worldCoinService;
+@inject MarketStateContainer _marketStateContainer;
+@inject PollingService PollingService
+
+<PageTitle>FetchData</PageTitle>
+
+<h1>FetchData</h1>
+
+<div class="form-group">
+    <label for="labelSelect">Labels:</label>
+    <select id="labelSelect" @onchange="OnlabelChanged" class="form-control">
+        @foreach (var label in labels)
+        {
+            <option value="@label">@label</option>
+        }
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="fiatSelect">Fiats:</label>
+    <select id="fiatSelect" @onchange="OnfiatChanged" class="form-control">
+        @foreach (var fiat in fiats)
+        {
+            <option value="@fiat">@fiat</option>
+        }
+    </select>
+</div>
+<button  @onclick="StartPolling">Start Polling</button>
+<button  @onclick="StopPolling">Stop Polling</button>
+<hr/>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Label</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Volume_24h</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (markets is not null)
+        {
+            @foreach (var market in markets)
+            {
+                <tr>
+                    <td>@market.Label</td>
+                    <td>@market.Name</td>
+                    <td>@market.Price</td>
+                    <td>@market.Volume_24h</td>
+                    <td>@market.Timestamp</td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>
+
+@code {
+    List<MarketDto> markets;
+    List<string> labels;
+    List<string> fiats;
+
+    protected override async void OnInitialized()
+    {
+        labels = _worldCoinService.GetLabels();
+        fiats = _worldCoinService.GetFiats();
+        markets = _marketStateContainer.getCurrentState();
+        _marketStateContainer.MarketInfoUpdated += updatedMarket;
+
+
+        StateHasChanged();
+    }
+    private void OnlabelChanged(ChangeEventArgs e)
+    {
+    }
+    private void OnfiatChanged(ChangeEventArgs e)
+    {
+    }
+
+    private void updatedMarket(List<MarketDto> tickers)
+    {
+        markets = tickers;
+        StateHasChanged();
+    }
+    private void StartPolling()
+    {
+        PollingService.StartPolling(); 
+    }
+
+    private void StopPolling()
+    {
+        PollingService.StopPolling(); 
+    }
+}
