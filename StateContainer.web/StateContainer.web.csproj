@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\StateContainer.Repository\StateContainer.Repository.csproj" />
     <ProjectReference Include="..\StateContainer.services\StateContainer.services.csproj" />
   </ItemGroup>
 

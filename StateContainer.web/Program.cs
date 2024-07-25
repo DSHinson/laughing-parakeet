@@ -18,7 +18,8 @@ builder.Services.AddTransient<WorldCoinService>(sp =>
 });
 
 builder.Services.AddSingleton<MarketStateContainer>();
-builder.Services.AddSingleton<PollingService>();
+builder.Services.AddHostedService<PollingService>();
+builder.Services.AddHostedService<SaveToDbService>();
 
 var app = builder.Build();
 
