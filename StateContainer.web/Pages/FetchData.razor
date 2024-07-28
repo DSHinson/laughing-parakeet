@@ -5,7 +5,6 @@
 
 @inject WorldCoinService _worldCoinService;
 @inject MarketStateContainer _marketStateContainer;
-@inject PollingService PollingService
 
 <PageTitle>FetchData</PageTitle>
 
@@ -30,9 +29,7 @@
         }
     </select>
 </div>
-<button  @onclick="StartPolling">Start Polling</button>
-<button  @onclick="StopPolling">Stop Polling</button>
-<hr/>
+<hr />
 <table class="table">
     <thead>
         <tr>
@@ -74,7 +71,10 @@
         _marketStateContainer.MarketInfoUpdated += updatedMarket;
 
 
-        StateHasChanged();
+        await InvokeAsync(() =>
+        {
+            StateHasChanged();
+        });
     }
     private void OnlabelChanged(ChangeEventArgs e)
     {
@@ -83,18 +83,12 @@
     {
     }
 
-    private void updatedMarket(List<MarketDto> tickers)
+    private async void updatedMarket(List<MarketDto> tickers)
     {
         markets = tickers;
-        StateHasChanged();
-    }
-    private void StartPolling()
-    {
-        PollingService.StartPolling(); 
-    }
-
-    private void StopPolling()
-    {
-        PollingService.StopPolling(); 
+        await InvokeAsync(() =>
+      {
+          StateHasChanged();
+      });
     }
 }

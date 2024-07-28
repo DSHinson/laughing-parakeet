@@ -1,6 +1,7 @@
 ﻿
 using StateContainer.dto.Market;
 using StateContainer.Repository;
+using System.Text.Json;
 
 namespace StateContainer.web.State
 {
@@ -8,6 +9,10 @@ namespace StateContainer.web.State
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly MarketStateContainer _stateContainer;
+        private static bool Saving =false;
+        private long lastTimeStamp = 0;
+        string WriteContent = "";
+
         public SaveToDbService(IServiceProvider serviceProvider, MarketStateContainer stateContainer)
         {
                 _serviceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
@@ -29,7 +34,39 @@ namespace StateContainer.web.State
 
         private void OnMarketInfoUpdated(List<MarketDto> newInfo)
         {
-            // Save the new info to the database
+            if (Saving)
+            {
+                return;
+            }
+            try
+            {
+                Saving = true;
+                newInfo = newInfo?.Where(x => x.Timestamp > lastTimeStamp).ToList();
+                if (newInfo.Count > 0)
+                {
+                    lastTimeStamp = newInfo?.Max(x => x.Timestamp) ?? 0;
+                    string temp = JsonSerializer.Serialize(newInfo);
+                    if (!string.IsNullOrEmpty(WriteContent))
+                    {
+                        WriteContent = WriteContent.Substring(0, WriteContent.Length - 1);
+                        WriteContent += ",";
+                    }
+                    else
+                    {
+                        WriteContent = "[";
+                    }
+                   
+
+                    WriteContent += temp;
+                    WriteContent += "]";
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally {
+                Saving = false;
+            }
         }
     }
 }

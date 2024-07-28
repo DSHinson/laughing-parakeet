@@ -9,7 +9,12 @@ namespace StateContainer.web.State
         public event Action<string> OnLabelChanged;
         public event Action<List<MarketDto>> MarketInfoUpdated;
         private  List<MarketDto> MarketInfo = new();
-                
+
+        public MarketStateContainer()
+        {
+            SetSelectedLabel("ethbtc-ltcbtc");
+            SetSelectedFiat("btc");
+        }
 
         public void SetSelectedFiat(string fiat)
         {
@@ -31,14 +36,21 @@ namespace StateContainer.web.State
 
         public void updateMarketInfo(List<MarketDto> market)
         {
-            MarketInfo.AddRange(market);
-            MarketInfoUpdated?.Invoke(MarketInfo);
+            
+            if (market is not null)
+            {
+                MarketInfo.AddRange(market);
+                MarketInfoUpdated?.Invoke(MarketInfo);
+            }
         }
 
         public List<MarketDto> getCurrentState()
         {
             return MarketInfo;
         }
+
+        public string getselectedFiat() => selectedFiat;
+        public string getselectedLabel() => selectedLabel;
 
     }
 

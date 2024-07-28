@@ -1,0 +1,98 @@
+﻿[
+  [
+    {
+      "Label": "ETH/BTC",
+      "Name": "Ethereum",
+      "Price": 0.048133786386778205,
+      "Volume_24h": 70653.35500683,
+      "Timestamp": 1722180060
+    },
+    {
+      "Label": "LTC/BTC",
+      "Name": "Litecoin",
+      "Price": 0.001045133190257509,
+      "Volume_24h": 1934.80106659,
+      "Timestamp": 1722180060
+    }
+  ],
+  [
+    {
+      "Label": "ETH/BTC",
+      "Name": "Ethereum",
+      "Price": 0.04814278103557906,
+      "Volume_24h": 70628.78785477,
+      "Timestamp": 1722180120
+    },
+    {
+      "Label": "LTC/BTC",
+      "Name": "Litecoin",
+      "Price": 0.001045397230778751,
+      "Volume_24h": 1934.80106659,
+      "Timestamp": 1722180120
+    }
+  ],
+  [
+    {
+      "Label": "ETH/BTC",
+      "Name": "Ethereum",
+      "Price": 0.0481626861300072,
+      "Volume_24h": 70621.08160864,
+      "Timestamp": 1722180180
+    },
+    {
+      "Label": "LTC/BTC",
+      "Name": "Litecoin",
+      "Price": 0.001045360998178732,
+      "Volume_24h": 1934.80106659,
+      "Timestamp": 1722180180
+    }
+  ],
+  [
+    {
+      "Label": "ETH/BTC",
+      "Name": "Ethereum",
+      "Price": 0.04816882646957893,
+      "Volume_24h": 70597.24681933,
+      "Timestamp": 1722180240
+    },
+    {
+      "Label": "LTC/BTC",
+      "Name": "Litecoin",
+      "Price": 0.001045399432995754,
+      "Volume_24h": 1934.80106659,
+      "Timestamp": 1722180240
+    }
+  ],
+  [
+    {
+      "Label": "ETH/BTC",
+      "Name": "Ethereum",
+      "Price": 0.04816694509846488,
+      "Volume_24h": 70573.27554665,
+      "Timestamp": 1722180300
+    },
+    {
+      "Label": "LTC/BTC",
+      "Name": "Litecoin",
+      "Price": 0.001045779949624556,
+      "Volume_24h": 1934.80106659,
+      "Timestamp": 1722180300
+    }
+  ],
+  [
+    {
+      "Label": "ETH/BTC",
+      "Name": "Ethereum",
+      "Price": 0.048167544385420785,
+      "Volume_24h": 70525.58197162,
+      "Timestamp": 1722180360
+    },
+    {
+      "Label": "LTC/BTC",
+      "Name": "Litecoin",
+      "Price": 0.001045045889062816,
+      "Volume_24h": 1935.00767873,
+      "Timestamp": 1722180360
+    }
+  ]
+]

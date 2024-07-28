@@ -21,6 +21,8 @@ namespace StateContainer.services
         private readonly MarketStateContainer _stateContainer;
         private CancellationTokenSource _cts;
         private bool _pollingAlready = false;
+        protected string selectedFiat;
+        protected string selectedLabel;
 
         public PollingService(IServiceProvider serviceProvider, ILogger<PollingService> logger, MarketStateContainer stateContainer)
         {
@@ -28,6 +30,14 @@ namespace StateContainer.services
             _logger = logger;
             _stateContainer = stateContainer;
             _cts = new CancellationTokenSource();
+            selectedFiat = _stateContainer.getselectedFiat();
+            selectedLabel = _stateContainer.getselectedLabel();
+            _stateContainer.OnFiatChanged += (string newval) => {
+                selectedFiat = newval;
+            };
+            _stateContainer.OnLabelChanged += (string newval) => {
+                selectedLabel = newval;
+            };
             StartPolling();
         }
 
@@ -50,12 +60,12 @@ namespace StateContainer.services
                 {
                     var scopedService = scope.ServiceProvider.GetRequiredService<WorldCoinService>();
                     // Use the scoped service to get the updated state
-                    var updatedState = (await scopedService.GetTickersAsync());
+                    var updatedState = (await scopedService.GetTickersAsync(selectedLabel,selectedFiat));
                     _stateContainer.updateMarketInfo(updatedState);
                 }
 
                 // Wait for 0.5 seconds
-                await Task.Delay((1000 * 60), token);
+                await Task.Delay((1000 *60), token);
             }
 
             _logger.LogInformation("PollingService stopped.");
