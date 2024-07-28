@@ -50,11 +50,18 @@ namespace StateContainer.web.State
 
             while (!token.IsCancellationRequested)
             {
-                List<MarketDto> currentData = TestData.First();
-                TestData.Remove(currentData);
+                if (TestData != null && TestData.Any())
+                {
+                    List<MarketDto> currentData = TestData.First();
+                    TestData.Remove(currentData);
+                    _stateContainer.updateMarketInfo(currentData);
+                    await Task.Delay(1000, token);
+                }
+                else
+                {
+                    _cts.Cancel();
+                }
 
-                _stateContainer.updateMarketInfo(currentData);
-                await Task.Delay((1000 * 60), token);
             }
 
             _logger.LogInformation("TestDataEventSource stopped.");
