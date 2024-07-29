@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StateContainer.services
+namespace StateContainer.web.State.DataSource
 {
     using System;
     using System.Threading;
@@ -12,9 +12,10 @@ namespace StateContainer.services
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.Extensions.Logging;
+    using StateContainer.services;
     using StateContainer.web.State;
 
-    public class PollingService : BackgroundService
+    public class PollingService : BackgroundService , IDataSource
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly ILogger<PollingService> _logger;
@@ -32,10 +33,12 @@ namespace StateContainer.services
             _cts = new CancellationTokenSource();
             selectedFiat = _stateContainer.getselectedFiat();
             selectedLabel = _stateContainer.getselectedLabel();
-            _stateContainer.OnFiatChanged += (string newval) => {
+            _stateContainer.OnFiatChanged += (newval) =>
+            {
                 selectedFiat = newval;
             };
-            _stateContainer.OnLabelChanged += (string newval) => {
+            _stateContainer.OnLabelChanged += (newval) =>
+            {
                 selectedLabel = newval;
             };
             StartPolling();
@@ -60,12 +63,12 @@ namespace StateContainer.services
                 {
                     var scopedService = scope.ServiceProvider.GetRequiredService<WorldCoinService>();
                     // Use the scoped service to get the updated state
-                    var updatedState = (await scopedService.GetTickersAsync(selectedLabel,selectedFiat));
+                    var updatedState = await scopedService.GetTickersAsync(selectedLabel, selectedFiat);
                     _stateContainer.updateMarketInfo(updatedState);
                 }
 
                 // Wait for 0.5 seconds
-                await Task.Delay((1000 *60), token);
+                await Task.Delay(1000 * 60, token);
             }
 
             _logger.LogInformation("PollingService stopped.");
@@ -78,7 +81,7 @@ namespace StateContainer.services
                 _pollingAlready = true;
                 _cts = new CancellationTokenSource();
                 ExecuteAsync(_cts.Token); // Start polling
-                
+
             }
         }
 

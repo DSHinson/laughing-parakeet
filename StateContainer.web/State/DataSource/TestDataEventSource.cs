@@ -3,10 +3,10 @@ using StateContainer.dto.Market;
 using StateContainer.services;
 using System.Text.Json;
 
-namespace StateContainer.web.State
+namespace StateContainer.web.State.DataSource
 {
 
-    public class TestDataEventSource : BackgroundService
+    public class TestDataEventSource : BackgroundService , IDataSource
     {
         List<List<MarketDto>> TestData;
         private readonly ILogger<TestDataEventSource> _logger;
@@ -22,7 +22,7 @@ namespace StateContainer.web.State
             string directoryPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
             // Combine the directory path with the filename
-            string filePath = Path.Combine(directoryPath, "State/TestDataSource.json");
+            string filePath = Path.Combine(directoryPath, "State/DataSource/TestDataSource.json");
 
             // Read the JSON file contents
             string jsonString = File.ReadAllText(filePath);

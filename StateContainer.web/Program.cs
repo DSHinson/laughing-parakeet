@@ -1,5 +1,6 @@
 using StateContainer.services;
 using StateContainer.web.State;
+using StateContainer.web.State.DataSource;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,10 +19,33 @@ builder.Services.AddTransient<WorldCoinService>(sp =>
 });
 
 builder.Services.AddSingleton<MarketStateContainer>();
+if (true)
+{
+    builder.Services.AddHostedService<TestDataEventSource>();
+}
+else {
+   builder.Services.AddHostedService<PollingService>();
+   builder.Services.AddHostedService<SaveToDbService>();
+}
 
-builder.Services.AddHostedService<TestDataEventSource>();
-//builder.Services.AddHostedService<PollingService>();
-//builder.Services.AddHostedService<SaveToDbService>();
+// Check for regular services
+var regularServicesCount = builder.Services.Count(sd => sd.ServiceType == typeof(IDataSource));
+
+// Check for hosted services
+var hostedServicesCount = builder.Services
+    .Where(sd => sd.ServiceType == typeof(IHostedService))
+    .Select(sd => sd.ImplementationFactory?.Method?.ReturnType)
+    .Concat(builder.Services.Where(sd => sd.ServiceType == typeof(IHostedService))
+                    .Select(sd => sd.ImplementationType))
+    .Count(type => type != null && typeof(IDataSource).IsAssignableFrom(type));
+
+// Total count of IDataSource implementations
+var totalCount = regularServicesCount + hostedServicesCount;
+
+if (totalCount > 1)
+{
+    throw new Exception("Cannot have more than one instance of IDataSource in the service collection.");
+}
 
 var app = builder.Build();
 
