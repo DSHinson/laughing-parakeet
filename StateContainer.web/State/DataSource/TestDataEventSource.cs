@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Options;
-using StateContainer.dto.Market;
-using StateContainer.services;
+﻿using StateContainer.dto.Market;
 using System.Text.Json;
 
 namespace StateContainer.web.State.DataSource
@@ -53,6 +51,7 @@ namespace StateContainer.web.State.DataSource
                 if (TestData != null && TestData.Any())
                 {
                     List<MarketDto> currentData = TestData.First();
+                    _logger.LogInformation("New object found",currentData);
                     TestData.Remove(currentData);
                     _stateContainer.updateMarketInfo(currentData);
                     await Task.Delay(1000, token);
