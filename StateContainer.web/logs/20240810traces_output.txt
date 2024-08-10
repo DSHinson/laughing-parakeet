@@ -1,0 +1,1194 @@
+TraceId: d25b26837fcb95577f9eef25725373db
+SpanId: 8205e765e0512537
+ParentId: 04cf3ac61f51a9b3
+Operation Name: GET
+Start Time: 8/10/2024 4:12:21 PM
+Duration: 00:00:00.1480168
+Attributes:
+	http.request.method: GET
+	server.address: localhost
+	server.port: 64463
+	url.full: http://localhost:64463/3ee57a6083804917977dc2d98e70b509/getScriptTag
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: d25b26837fcb95577f9eef25725373db
+SpanId: 04cf3ac61f51a9b3
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:12:21 PM
+Duration: 00:00:00.6286259
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 31bbe775475419701299a94875fbfa20
+SpanId: f9a3cf23af816c31
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:12:21 PM
+Duration: 00:00:00.0342095
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_framework/aspnetcore-browser-refresh.js
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: cad491ac4dd625c36fc0ba79d6b7462b
+SpanId: bced8053d7599df5
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:12:21 PM
+Duration: 00:00:00.0361589
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /css/site.css
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 304
+Events:
+--------------------------------------------------
+TraceId: 501306397ba95e2bdcc14b07e50d9ad9
+SpanId: 500c9b92cdf70c3b
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:12:21 PM
+Duration: 00:00:00.0368998
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_framework/blazor.server.js
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 304
+Events:
+--------------------------------------------------
+TraceId: 7fba8b503ff6e44cf2ab60b6af129dc0
+SpanId: f8edc2be86291a68
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:12:21 PM
+Duration: 00:00:00.0388209
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /css/bootstrap/bootstrap.min.css
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 304
+Events:
+--------------------------------------------------
+TraceId: 7bd6da6818a01302eb8736cc750b3d41
+SpanId: 98cd1b23b91adb9d
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:12:21 PM
+Duration: 00:00:00.0076837
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /css/open-iconic/font/css/open-iconic-bootstrap.min.css
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 304
+Events:
+--------------------------------------------------
+TraceId: 5a9a8f7013157b620a8bee2a4408b738
+SpanId: 8b89527b00a0a88e
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:12:21 PM
+Duration: 00:00:00.0544307
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /StateContainer.web.styles.css
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 9065fd6e825306789a8f7542f00ae875
+SpanId: 23fd0e423851f92a
+ParentId: 0000000000000000
+Operation Name: GET /_blazor/initializers/
+Start Time: 8/10/2024 4:12:21 PM
+Duration: 00:00:00.0049975
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_blazor/initializers
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/initializers/
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 60cd0287dd6738d7cd5dd2302ce4f545
+SpanId: a05ecd6e3c707784
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:12:21 PM
+Duration: 00:00:00.0690905
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_vs/browserLink
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 8988aafa3e00f01d05968108bdc4eee8
+SpanId: 68bf4f6e993b6a92
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:12:21 PM
+Duration: 00:00:00.0007336
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /css/open-iconic/font/fonts/open-iconic.woff
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 304
+Events:
+--------------------------------------------------
+TraceId: c1ab390e8dd3ede99b4d93471a2d28b7
+SpanId: b9b9a8790a1474ea
+ParentId: 0000000000000000
+Operation Name: POST /_blazor/negotiate
+Start Time: 8/10/2024 4:12:21 PM
+Duration: 00:00:00.0101826
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	url.query: ?negotiateVersion=Redacted
+	http.request.method: POST
+	url.scheme: https
+	url.path: /_blazor/negotiate
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/negotiate
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 813de1a22b361eff7308e9081a26e36c
+SpanId: 4f253ffbd9d877de
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:12:21 PM
+Duration: 00:00:00.0223062
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /favicon.ico
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 80406ad58985c7a4a71afc97422d3bff
+SpanId: 2ec99733cdf22384
+ParentId: 5dd36817159e4557
+Operation Name: GET
+Start Time: 8/10/2024 4:14:13 PM
+Duration: 00:00:00.0198773
+Attributes:
+	http.request.method: GET
+	server.address: localhost
+	server.port: 64463
+	url.full: http://localhost:64463/3ee57a6083804917977dc2d98e70b509/getScriptTag
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 80406ad58985c7a4a71afc97422d3bff
+SpanId: 5dd36817159e4557
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:14:13 PM
+Duration: 00:00:00.3113105
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 793e08f4351bbb0d26c7d2727f2b6775
+SpanId: a0783c1411ab116b
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:14:13 PM
+Duration: 00:00:00.0133522
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_framework/aspnetcore-browser-refresh.js
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 174296faf6d3f49d0f928aa27359ebd5
+SpanId: c2a64222e03b5e8d
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:14:13 PM
+Duration: 00:00:00.0132990
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /StateContainer.web.styles.css
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 304
+Events:
+--------------------------------------------------
+TraceId: d8f332ec58dc30b5d86678c6641f8c08
+SpanId: 5424333ac285091a
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:14:13 PM
+Duration: 00:00:00.0145815
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_framework/blazor.server.js
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 304
+Events:
+--------------------------------------------------
+TraceId: f5f5dc024cbe5b7b1fa5da6d6955d002
+SpanId: 26727dc1a20e3872
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:14:13 PM
+Duration: 00:00:00.0436184
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_vs/browserLink
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 351be1d824e4d6aa792c2c70bc17982a
+SpanId: 9d8b50ea331c34b3
+ParentId: 0000000000000000
+Operation Name: GET /_blazor/initializers/
+Start Time: 8/10/2024 4:14:13 PM
+Duration: 00:00:00.0058141
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_blazor/initializers
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/initializers/
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 980f708eadb697f5a5e0aca54806bfbc
+SpanId: 4c79fb15452a7786
+ParentId: 0000000000000000
+Operation Name: POST /_blazor/negotiate
+Start Time: 8/10/2024 4:14:14 PM
+Duration: 00:00:00.0100352
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	url.query: ?negotiateVersion=Redacted
+	http.request.method: POST
+	url.scheme: https
+	url.path: /_blazor/negotiate
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/negotiate
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: ce7f897613b1a1738ee1328e9f47cef4
+SpanId: 442bbd728b9d53d3
+ParentId: 0000000000000000
+Operation Name: POST /_blazor/negotiate
+Start Time: 8/10/2024 4:14:16 PM
+Duration: 00:00:00.0009491
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	url.query: ?negotiateVersion=Redacted
+	http.request.method: POST
+	url.scheme: https
+	url.path: /_blazor/negotiate
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/negotiate
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: c535d1916c40cd4432f53ac7aab51821
+SpanId: c89fbe552e1de477
+ParentId: 0000000000000000
+Operation Name: POST /_blazor/disconnect/
+Start Time: 8/10/2024 4:14:23 PM
+Duration: 00:00:00.0206283
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: POST
+	url.scheme: https
+	url.path: /_blazor/disconnect
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/disconnect/
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 28a79eff0b800441cafd33c471e14d8b
+SpanId: 60ebb0570e800463
+ParentId: 0000000000000000
+Operation Name: CONNECT /_blazor
+Start Time: 8/10/2024 4:14:16 PM
+Duration: 00:00:07.0969294
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	url.query: ?id=Redacted
+	http.request.method: CONNECT
+	url.scheme: https
+	url.path: /_blazor
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.long_running: true
+	http.route: /_blazor
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: a9ef90836d66a96b55f94fe7379973ab
+SpanId: d576ad1c8a83a5d5
+ParentId: 0000000000000000
+Operation Name: POST /_blazor/negotiate
+Start Time: 8/10/2024 4:18:06 PM
+Duration: 00:00:00.0836602
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	url.query: ?negotiateVersion=Redacted
+	http.request.method: POST
+	url.scheme: https
+	url.path: /_blazor/negotiate
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/negotiate
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 9c82cd5f450c409f73f993072f2d7eeb
+SpanId: 046e8f1f183e40ef
+ParentId: 8df4ebf647a8113f
+Operation Name: GET
+Start Time: 8/10/2024 4:18:06 PM
+Duration: 00:00:00.0199403
+Attributes:
+	http.request.method: GET
+	server.address: localhost
+	server.port: 64463
+	url.full: http://localhost:64463/3ee57a6083804917977dc2d98e70b509/getScriptTag
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 9c82cd5f450c409f73f993072f2d7eeb
+SpanId: 8df4ebf647a8113f
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:18:06 PM
+Duration: 00:00:00.2301059
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 0de07acfcfd979d696373e3914bbfc1a
+SpanId: ab8ee007ec38610d
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:18:07 PM
+Duration: 00:00:00.0062593
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /StateContainer.web.styles.css
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 304
+Events:
+--------------------------------------------------
+TraceId: f9bcaab440223c41e4dcbc00d3b8d30d
+SpanId: 05a5b9bd52a59780
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:18:07 PM
+Duration: 00:00:00.0063153
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_framework/aspnetcore-browser-refresh.js
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 2e1095a3cd0aed829d77518db7e6cc11
+SpanId: 35686d2bc7b9a211
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:18:07 PM
+Duration: 00:00:00.0058529
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_framework/blazor.server.js
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 304
+Events:
+--------------------------------------------------
+TraceId: 5f86628c6cc1101eb7f6fefc6093146b
+SpanId: b52e7f6dce98835c
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:18:07 PM
+Duration: 00:00:00.0480989
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_vs/browserLink
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: fc881b0a3e06d6bc8074d5a8e10b4028
+SpanId: 607c84356909845b
+ParentId: 0000000000000000
+Operation Name: GET /_blazor/initializers/
+Start Time: 8/10/2024 4:18:07 PM
+Duration: 00:00:00.0040391
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_blazor/initializers
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/initializers/
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 9cb8d6c26603b72f54716d8c12c1ae7b
+SpanId: 63ad3e3e1085b6e5
+ParentId: 0000000000000000
+Operation Name: POST /_blazor/negotiate
+Start Time: 8/10/2024 4:18:07 PM
+Duration: 00:00:00.0007148
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	url.query: ?negotiateVersion=Redacted
+	http.request.method: POST
+	url.scheme: https
+	url.path: /_blazor/negotiate
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/negotiate
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 68299c75d716eabc6f96bbefcfc7a67f
+SpanId: c37ac2e86c68d1d4
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:19:05 PM
+Duration: 00:00:00.1063724
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 91df844b56195e7de1e27157039fddda
+SpanId: 28eb3e3f035514e9
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:19:06 PM
+Duration: 00:00:00.0898615
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 41f6764409e4cbad2538cb952a58948e
+SpanId: ade7ac56f5a76ad8
+ParentId: 0000000000000000
+Operation Name: CONNECT /_blazor
+Start Time: 8/10/2024 4:18:06 PM
+Duration: 00:01:48.4111443
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	url.query: ?id=Redacted
+	http.request.method: CONNECT
+	url.scheme: https
+	url.path: /_blazor
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.long_running: true
+	http.route: /_blazor
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 2c7cfe4501479976913e0e54468ddf59
+SpanId: 500c01b992d71ca5
+ParentId: 0000000000000000
+Operation Name: POST /_blazor/disconnect/
+Start Time: 8/10/2024 4:19:54 PM
+Duration: 00:00:00.0240020
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: POST
+	url.scheme: https
+	url.path: /_blazor/disconnect
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/disconnect/
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 1340dc9a4a017a8d8da90533054b3cf4
+SpanId: 3200ff7e1e0f1bc4
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:20:06 PM
+Duration: 00:00:00.2075508
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: d63c424c86b01134c5a29082dd8f5ff4
+SpanId: 0f919b4679ee6033
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:20:06 PM
+Duration: 00:00:00.0863060
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: b9c5ab2f13414f276fbf224965b1e3d7
+SpanId: 2d89edf4c4b066b2
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:21:06 PM
+Duration: 00:00:00.0834681
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 50a22ee945e17d719ecf04822dd23c46
+SpanId: 018da4400726330d
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:21:06 PM
+Duration: 00:00:00.0949105
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 44e442243bf1683a74f99c952c36f350
+SpanId: 5381251ea9ea6fd8
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:22:06 PM
+Duration: 00:00:00.2183361
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 576e6482c4accf4ac10b8966a7381867
+SpanId: f9438f58a5cc0c09
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:23:06 PM
+Duration: 00:00:00.0884618
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: a8a17123d099c44c05f32d9a64c565da
+SpanId: f94306e1dc488218
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:24:06 PM
+Duration: 00:00:00.2389949
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 92c94369d2528e9453e07542e2e655c3
+SpanId: a9f5b656d27b9043
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:25:06 PM
+Duration: 00:00:00.0767333
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 0f3ac87d0101bbf22b0bb50c90fcf459
+SpanId: b589fe359efed2b0
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:25:06 PM
+Duration: 00:00:00.0839420
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 1c25ad7435c6478919140f8b4b8dafed
+SpanId: 2f1969cb6654dc85
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:26:06 PM
+Duration: 00:00:00.2054916
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: ded3ec41a8c505b99d55626529dd11e0
+SpanId: dec0c261b4f81534
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:27:07 PM
+Duration: 00:00:09.4548607
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 40bea1ee2283b430cdc1de0fb1eb708f
+SpanId: b45fcd7be9b9033e
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:28:19 PM
+Duration: 00:00:00.1853794
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 3f959db80f71ddf1dc569cce00f88256
+SpanId: 4066f480031ea615
+ParentId: 333c17d68a416473
+Operation Name: GET
+Start Time: 8/10/2024 4:29:15 PM
+Duration: 00:00:00.0211544
+Attributes:
+	http.request.method: GET
+	server.address: localhost
+	server.port: 64463
+	url.full: http://localhost:64463/3ee57a6083804917977dc2d98e70b509/getScriptTag
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 3f959db80f71ddf1dc569cce00f88256
+SpanId: 333c17d68a416473
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:29:15 PM
+Duration: 00:00:00.4194015
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 2e857059caada22517fa0019a3669265
+SpanId: 912c062b17202a15
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:29:16 PM
+Duration: 00:00:00.0314586
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_framework/aspnetcore-browser-refresh.js
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: bcc2bf516fe9b35779a34d4a5131b104
+SpanId: 0b13cc5dced407b4
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:29:16 PM
+Duration: 00:00:00.0318811
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_framework/blazor.server.js
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 304
+Events:
+--------------------------------------------------
+TraceId: 50713275ac0b12d8c2f9fe70f72fe46c
+SpanId: 2f8e9b83e4dc6705
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:29:16 PM
+Duration: 00:00:00.0314232
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /StateContainer.web.styles.css
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 304
+Events:
+--------------------------------------------------
+TraceId: 1ce9494feae4a890f2fb41d7dc68ff36
+SpanId: da2667a35858e4f2
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:29:16 PM
+Duration: 00:00:00.0970540
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_vs/browserLink
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: d9e6f88c0d1bdff4d6e94ee5ba26d582
+SpanId: fb9bc02facd6b6ac
+ParentId: 0000000000000000
+Operation Name: GET /_blazor/initializers/
+Start Time: 8/10/2024 4:29:16 PM
+Duration: 00:00:00.0131819
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_blazor/initializers
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/initializers/
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: f9a27775db15eeaa1421df0f20b5f617
+SpanId: f56cb657b193e0fd
+ParentId: 0000000000000000
+Operation Name: POST /_blazor/negotiate
+Start Time: 8/10/2024 4:29:16 PM
+Duration: 00:00:00.0168004
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	url.query: ?negotiateVersion=Redacted
+	http.request.method: POST
+	url.scheme: https
+	url.path: /_blazor/negotiate
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/negotiate
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 50898255a050f433c14be1cfe4b18de2
+SpanId: 6802c53c8a81edda
+ParentId: 0000000000000000
+Operation Name: POST /_blazor/negotiate
+Start Time: 8/10/2024 4:29:16 PM
+Duration: 00:00:00.0010389
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	url.query: ?negotiateVersion=Redacted
+	http.request.method: POST
+	url.scheme: https
+	url.path: /_blazor/negotiate
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/negotiate
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 613fcde4cba87cd1268d220b333deed1
+SpanId: 80bf3df341d80cad
+ParentId: 7ff868e54c2a5587
+Operation Name: GET
+Start Time: 8/10/2024 4:33:15 PM
+Duration: 00:00:00.0175045
+Attributes:
+	http.request.method: GET
+	server.address: localhost
+	server.port: 64463
+	url.full: http://localhost:64463/3ee57a6083804917977dc2d98e70b509/getScriptTag
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 613fcde4cba87cd1268d220b333deed1
+SpanId: 7ff868e54c2a5587
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:33:15 PM
+Duration: 00:00:00.2867739
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: d8a176d072cd0cfbe8eec79f0d524443
+SpanId: 7acf67a91be86a30
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:33:15 PM
+Duration: 00:00:00.0210478
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_framework/blazor.server.js
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 304
+Events:
+--------------------------------------------------
+TraceId: fa3092055abd511da35d205ae2294582
+SpanId: 35b8b0d24b22763b
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:33:15 PM
+Duration: 00:00:00.0220703
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_framework/aspnetcore-browser-refresh.js
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 7cb395c2b0a97edc7987bcb17d0cee8a
+SpanId: 959b2eb1af9f9ccc
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:33:15 PM
+Duration: 00:00:00.0213931
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /StateContainer.web.styles.css
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 304
+Events:
+--------------------------------------------------
+TraceId: 0a0e23a97750cc0bbd2ba461e43d7d0c
+SpanId: 7da4ee2ab3b18c1c
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:33:15 PM
+Duration: 00:00:00.0593915
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_vs/browserLink
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: c61c97ef7be6f3b65d958ac3cf0e2b34
+SpanId: 07f5d09db9b9ff13
+ParentId: 0000000000000000
+Operation Name: GET /_blazor/initializers/
+Start Time: 8/10/2024 4:33:15 PM
+Duration: 00:00:00.0049878
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: GET
+	url.scheme: https
+	url.path: /_blazor/initializers
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/initializers/
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: e80f65a4d73fa77b1eee14f5f14fbfc7
+SpanId: ca9f43756dc3c6d0
+ParentId: 0000000000000000
+Operation Name: POST /_blazor/negotiate
+Start Time: 8/10/2024 4:33:15 PM
+Duration: 00:00:00.0103493
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	url.query: ?negotiateVersion=Redacted
+	http.request.method: POST
+	url.scheme: https
+	url.path: /_blazor/negotiate
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/negotiate
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: da3c8ae8b7050365110b7d2441cd2fac
+SpanId: 81c2a6a3d47cea2e
+ParentId: 0000000000000000
+Operation Name: POST /_blazor/disconnect/
+Start Time: 8/10/2024 4:33:26 PM
+Duration: 00:00:00.0192609
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: POST
+	url.scheme: https
+	url.path: /_blazor/disconnect
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/disconnect/
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 2436b92f0a6f6822df7e3ff55c2d0390
+SpanId: 43cfdff3a06cbdfd
+ParentId: 0000000000000000
+Operation Name: POST /_blazor/disconnect/
+Start Time: 8/10/2024 4:33:27 PM
+Duration: 00:00:00.0015877
+Attributes:
+	server.address: localhost
+	server.port: 7053
+	http.request.method: POST
+	url.scheme: https
+	url.path: /_blazor/disconnect
+	network.protocol.version: 2
+	user_agent.original: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+	http.route: /_blazor/disconnect/
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 192432040cab936b9b1c1854d5c8fdfe
+SpanId: 15edc152c6775773
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:34:14 PM
+Duration: 00:00:00.1442019
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 9b02e984132e86be89f8ebe482ada204
+SpanId: 8df13de0b34b56ff
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:34:14 PM
+Duration: 00:00:00.0937145
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------
+TraceId: 16396ebd5b2ae417b21b600365426516
+SpanId: 96d63678651bfbed
+ParentId: 0000000000000000
+Operation Name: GET
+Start Time: 8/10/2024 4:35:14 PM
+Duration: 00:00:00.2194343
+Attributes:
+	http.request.method: GET
+	server.address: www.worldcoinindex.com
+	server.port: 443
+	url.full: https://www.worldcoinindex.com/apiservice/ticker?key=Redacted&label=Redacted&fiat=Redacted
+	network.protocol.version: 1.1
+	http.response.status_code: 200
+Events:
+--------------------------------------------------

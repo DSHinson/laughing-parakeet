@@ -15,18 +15,33 @@ namespace StateContainer.web.State.DataSource
     using StateContainer.services;
     using StateContainer.web.State;
 
-    public class PollingService : BackgroundService , IDataSource
+    public class PollingService : BackgroundService, IDataSource
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly ILogger<PollingService> _logger;
         private readonly MarketStateContainer _stateContainer;
         private CancellationTokenSource _cts;
-        private bool _pollingAlready = false;
+        private static bool _pollingAlready = false;
         protected string selectedFiat;
         protected string selectedLabel;
 
+        // Singleton instance
+        private static PollingService _instance = null;
+
+        // Static constructor to enforce singleton pattern
+        static PollingService()
+        {
+            _instance = null;
+        }
+
+        // Regular constructor but with a singleton check
         public PollingService(IServiceProvider serviceProvider, ILogger<PollingService> logger, MarketStateContainer stateContainer)
         {
+            if (_instance != null)
+            {
+                throw new InvalidOperationException("An instance of PollingService already exists.");
+            }
+
             _serviceProvider = serviceProvider;
             _logger = logger;
             _stateContainer = stateContainer;
@@ -41,7 +56,10 @@ namespace StateContainer.web.State.DataSource
             {
                 selectedLabel = newval;
             };
-            StartPolling();
+
+            _instance = this; // Set the static instance
+
+            StartPolling(); // Consider moving this outside the constructor if needed
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -67,7 +85,7 @@ namespace StateContainer.web.State.DataSource
                     _stateContainer.updateMarketInfo(updatedState);
                 }
 
-                // Wait for 0.5 seconds
+                // Wait for 1 minute
                 await Task.Delay(1000 * 60, token);
             }
 
@@ -81,7 +99,6 @@ namespace StateContainer.web.State.DataSource
                 _pollingAlready = true;
                 _cts = new CancellationTokenSource();
                 ExecuteAsync(_cts.Token); // Start polling
-
             }
         }
 
@@ -93,6 +110,18 @@ namespace StateContainer.web.State.DataSource
                 _pollingAlready = false;
             }
         }
+
+        // Method to retrieve the singleton instance
+        public static PollingService GetInstance(IServiceProvider serviceProvider, ILogger<PollingService> logger, MarketStateContainer stateContainer)
+        {
+            if (_instance == null)
+            {
+                _instance = new PollingService(serviceProvider, logger, stateContainer);
+            }
+
+            return _instance;
+        }
     }
+
 
 }

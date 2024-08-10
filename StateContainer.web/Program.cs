@@ -1,9 +1,12 @@
+using Docker.DotNet.Models;
 using Npgsql;
 using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using StateContainer.services;
+using StateContainer.web.Docker;
+using StateContainer.web.Logging;
 using StateContainer.web.State;
 using StateContainer.web.State.DataSource;
 using System.Diagnostics;
@@ -20,7 +23,7 @@ internal class Program
         builder.Services.AddServerSideBlazor();
         // Register HttpClient for dependency injection
         builder.Services.AddHttpClient();
-        builder.Logging.AddOpenTelemetry(logging => logging.AddOtlpExporter());
+        builder.Logging.AddOpenTelemetry(logging => logging.AddFileExporter($"logs/{DateTime.Now.ToString("yyyyMMdd")}logs_output.txt"));
 
         ApiKeyProvider apiKeyProvider = new ApiKeyProvider();
         string apiKey = apiKeyProvider.GetApiKey();
@@ -31,7 +34,7 @@ internal class Program
         });
 
         builder.Services.AddSingleton<MarketStateContainer>();
-        if (true)
+        if (false)
         {
             builder.Services.AddHostedService<TestDataEventSource>();
         }
@@ -47,7 +50,8 @@ internal class Program
             .WithMetrics(metrics => {
                 metrics.AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation();
-                metrics.AddOtlpExporter(options => options.Endpoint = new Uri("http://localhost:18888"));
+                // Use custom file exporter
+                metrics.AddFileExporter($"logs/{DateTime.Now.ToString("yyyyMMdd")}metrics_output.txt");
             })
             .WithTracing(tracing =>
             {
@@ -58,7 +62,8 @@ internal class Program
                     .AddRedisInstrumentation()
                     .AddNpgsql();
 
-                tracing.AddOtlpExporter(options => options.Endpoint = new Uri("http://localhost:18888"));
+                // Use custom file exporter
+                tracing.AddFileExporter($"logs/{DateTime.Now.ToString("yyyyMMdd")}traces_output.txt");
             });
         // Check for regular services
         var regularServicesCount = builder.Services.Count(sd => sd.ServiceType == typeof(IDataSource));
@@ -97,10 +102,6 @@ internal class Program
 
         app.MapBlazorHub();
         app.MapFallbackToPage("/_Host");
-        //string command = "docker run -d -p 4317:4317 -p 16686:16686 jaegertracing/all-in-one:latest";
-        //RunStartupCommand(command);
-        string command = "docker run -d -p 18888:18888 mcr.microsoft.com/dotnet/nightly/aspire-dashboard:8.1";
-        RunStartupCommand(command);
         app.Run();
     }
 
@@ -131,7 +132,7 @@ internal class Program
                 process.WaitForExit();
 
                 // Log the output (if needed)
-                Console.WriteLine("Output:");
+                Console.WriteLine("Docker Output:");
                 Console.WriteLine(output);
                 Console.WriteLine("Error:");
                 Console.WriteLine(error);
@@ -142,6 +143,34 @@ internal class Program
             // Handle exceptions (e.g., log the error)
             Console.WriteLine("An error occurred while running the command:");
             Console.WriteLine(ex.Message);
+        }
+    }
+
+    private static async void StartDocker()
+    {
+        DockerConfig dockerConfig = new DockerConfig()
+        {
+            ImageName = "mcr.microsoft.com/dotnet/nightly/aspire-dashboard",
+            Tag = "8.1",
+            ContainerName = "my-aspire-dashboard-container",
+            HostPort = 18888,
+            ContainerPort = 18888,
+        };
+
+        DockerService dockerService = new DockerService();
+        await dockerService.PullImageAsync(dockerConfig.ImageName, dockerConfig.Tag);
+        string containerId = await dockerService.CreateContainerAsync(dockerConfig);
+
+        bool started = await dockerService.StartContainerAsync(containerId);
+
+        if (started)
+        {
+            Console.WriteLine($"Container started with ID: {containerId}");
+            await dockerService.CaptureLogAsync(containerId);
+        }
+        else
+        {
+            Console.WriteLine("Failed to start the container.");
         }
     }
 }
