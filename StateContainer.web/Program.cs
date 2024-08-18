@@ -34,6 +34,18 @@ internal class Program
         });
 
         builder.Services.AddSingleton<MarketStateContainer>();
+        builder.Services.AddScoped<jsLoggingService>();
+        // Register the concrete implementation
+        builder.Services.AddScoped<CounterService>();
+        builder.Services.AddScoped<SaveToDbService>();
+
+        builder.Services.AddScoped<ICounterService>(provider =>
+        {
+            var logger = provider.GetRequiredService<ILogger<CounterService>>();
+            var service = provider.GetRequiredService<CounterService>();
+            return ServiceLoggingProxy<ICounterService>.Create(service, logger);
+        });
+
         if (false)
         {
             builder.Services.AddHostedService<TestDataEventSource>();
@@ -41,7 +53,12 @@ internal class Program
         else
         {
             builder.Services.AddHostedService<PollingService>();
-            builder.Services.AddHostedService<SaveToDbService>();
+            builder.Services.AddScoped<ISaveToDbService>(provider =>
+            {
+                var Service = provider.GetRequiredService<SaveToDbService>();
+                var logger = provider.GetRequiredService<ILogger<SaveToDbService>>();
+                return ServiceLoggingProxy<SaveToDbService>.Create(Service, logger);
+            });
         }
         //For more info: https://www.milanjovanovic.tech/blog/introduction-to-distributed-tracing-with-opentelemetry-in-dotnet
         builder.Services

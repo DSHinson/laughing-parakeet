@@ -1,4 +1,6 @@
 ﻿@page "/counter"
+@using StateContainer.services
+@inject ICounterService counterService
 
 <PageTitle>Counter</PageTitle>
 
@@ -13,6 +15,6 @@
 
     private void IncrementCount(int amountToIncrease)
     {
-        currentCount += amountToIncrease;
+        currentCount = counterService.incrementValue(currentCount,amountToIncrease);
     }
 }

@@ -5,7 +5,7 @@ using System.Text.Json;
 
 namespace StateContainer.web.State
 {
-    public class SaveToDbService : BackgroundService
+    public class SaveToDbService : ISaveToDbService
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly MarketStateContainer _stateContainer;
@@ -20,7 +20,7 @@ namespace StateContainer.web.State
             _stateContainer.MarketInfoUpdated += OnMarketInfoUpdated;
         }
 
-        protected override Task ExecuteAsync(CancellationToken stoppingToken)
+        public Task ExecuteAsync(CancellationToken stoppingToken)
         {
             // Initialization logic, if any
             return Task.CompletedTask;
@@ -32,7 +32,7 @@ namespace StateContainer.web.State
             return Task.CompletedTask;
         }
 
-        private void OnMarketInfoUpdated(List<MarketDto> newInfo)
+        public void OnMarketInfoUpdated(List<MarketDto> newInfo)
         {
             if (Saving)
             {
