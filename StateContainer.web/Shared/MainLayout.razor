@@ -1,5 +1,7 @@
-﻿@inherits LayoutComponentBase
-
+﻿@using StateContainer.web.Logging
+@inherits LayoutComponentBase
+@inject IJSRuntime _jsRuntime
+@inject jsLoggingService LoggingService
 <PageTitle>StateContainer.web</PageTitle>
 
 <div class="page">
@@ -17,3 +19,15 @@
         </article>
     </main>
 </div>
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await _jsRuntime.InvokeVoidAsync("initializeButtonClickLogger", DotNetObjectReference.Create(LoggingService));
+            //await _jsRuntime.InvokeVoidAsync("initializeWebSocketLogger", DotNetObjectReference.Create(LoggingService));
+            
+
+        }
+    }
+}

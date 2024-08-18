@@ -58,9 +58,7 @@ internal class Program
                 tracing
                     .AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation()
-                    .AddEntityFrameworkCoreInstrumentation()
-                    .AddRedisInstrumentation()
-                    .AddNpgsql();
+                    .AddEntityFrameworkCoreInstrumentation();
 
                 // Use custom file exporter
                 tracing.AddFileExporter($"logs/{DateTime.Now.ToString("yyyyMMdd")}traces_output.txt");

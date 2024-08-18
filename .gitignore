@@ -1,5 +1,7 @@
 ## Ignore Visual Studio temporary files, build results, and
 ## folder-based project files.
+# exclude everything
+/StateContainer.web/logs/*
 
 # User-specific files
 *.rsuser
